@@ -3,8 +3,8 @@
 #include <Adafruit_NeoPixel.h>
 
 #define SS_PIN_1 10  // Lettore 1 (luogo)
-#define SS_PIN_2 8   // Lettore 2 (oggetto)
-#define SS_PIN_3 11  // Lettore 3 (oggetto)
+#define SS_PIN_2 11   // Lettore 2 (oggetto)
+#define SS_PIN_3 8  // Lettore 3 (oggetto)
 #define RST_PIN 9
 
 #define PIN_NEOPIXEL 6
