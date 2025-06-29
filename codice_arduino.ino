@@ -48,7 +48,6 @@ byte piatti[7]          = {0x04, 0xD8, 0x56, 0x69, 0xBF, 0x2A, 0x81};
 byte cibo[7]            = {0x04, 0x27, 0x5C, 0x69, 0xBF, 0x2A, 0x81};
 byte centrotavola[7]    = {0x04, 0x90, 0x47, 0x6A, 0xBF, 0x2A, 0x81};
 byte pentola[7]         = {0x04, 0x76, 0x81, 0x6A, 0xBF, 0x2A, 0x81};
-byte posate[7]          = {0x04, 0xA8, 0x80, 0x6A, 0xBF, 0x2A, 0x81};
 byte tazza[7]           = {0x04, 0x9D, 0x89, 0x6A, 0xBF, 0x2A, 0x81};
 byte bicchiere[7]       = {0x04, 0xBB, 0x4A, 0x69, 0xBF, 0x2A, 0x81};
 byte mestolo[7]         = {0x04, 0xD1, 0xFA, 0x69, 0xBF, 0x2A, 0x81};
@@ -61,6 +60,7 @@ byte tappeto[7]         = {0x04, 0xE8, 0x71, 0x6A, 0xBF, 0x2A, 0x81};
 byte comodino[7]        = {0x04, 0x66, 0x81, 0x69, 0xBF, 0x2A, 0x81};
 byte pantofole[7]       = {0x04, 0x67, 0x68, 0x6A, 0xBF, 0x2A, 0x81};
 byte letto[7]           = {0x04, 0x7E, 0x5E, 0x6A, 0xBF, 0x2A, 0x81};
+byte cuscino[7]          = {0x04, 0xA8, 0x80, 0x6A, 0xBF, 0x2A, 0x81};
 
 byte luogoAttivo[7] = {0};
 bool luogoMemorizzato = false;
@@ -197,13 +197,13 @@ bool checkAssociazione(byte *luogo, byte *oggetto) {
   if (compareUID(luogo, scuola))
     return compareUID(oggetto, altalena) || compareUID(oggetto, alfabeto) || compareUID(oggetto, zaino) || compareUID(oggetto, lavagna) || compareUID(oggetto, libri);
   if (compareUID(luogo, cucina))
-    return compareUID(oggetto, pentola) || compareUID(oggetto, piatti) || compareUID(oggetto, cibo) || compareUID(oggetto, posate) || compareUID(oggetto, tazza) || compareUID(oggetto, bicchiere) || compareUID(oggetto, mestolo);
+    return compareUID(oggetto, pentola) || compareUID(oggetto, piatti) || compareUID(oggetto, cibo) || compareUID(oggetto, tazza) || compareUID(oggetto, bicchiere) || compareUID(oggetto, mestolo);
   if (compareUID(luogo, parco))
     return compareUID(oggetto, altalena) || compareUID(oggetto, panchina) || compareUID(oggetto, fiori) || compareUID(oggetto, alberi) || compareUID(oggetto, palla);
   if (compareUID(luogo, camera))
-    return compareUID(oggetto, tappeto) || compareUID(oggetto, comodino) || compareUID(oggetto, pantofole) || compareUID(oggetto, letto) || compareUID(oggetto, libri);
+    return compareUID(oggetto, tappeto) || compareUID(oggetto, comodino) || compareUID(oggetto, pantofole) || compareUID(oggetto, letto) || compareUID(oggetto, libri) || compareUID(oggetto, cuscino);
   if (compareUID(luogo, pranzo))
-    return compareUID(oggetto, piatti) || compareUID(oggetto, cibo) || compareUID(oggetto, centrotavola) || compareUID(oggetto, bicchiere) || compareUID(oggetto, posate);
+    return compareUID(oggetto, piatti) || compareUID(oggetto, cibo) || compareUID(oggetto, centrotavola) || compareUID(oggetto, bicchiere);
   return false;
 }
 
